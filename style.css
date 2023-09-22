@@ -1,0 +1,448 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-1{
+  background-image: url("./assets/images/background.jpg");
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center center;
+color: var(--White);
+}
+
+.song-wrapper{
+  
+}
+
+.music_wrapper{
+  background-image: url("./assets/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--White);
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap:1.5rem;
+  padding:1rem;
+  height: 100svh;
+}
+
+/* For the music navigation css */
+.navigation{
+background-color: var(--Faded_Black) ;
+color:var(--White);
+border-radius: 10px;
+}
+
+.navigation ul{
+  /* overwritting the default css */
+  display:block;
+}
+.navigation ul li{
+  display:block;
+  margin-bottom:1rem;
+}
+.navigation ul li a{
+  display: block;
+  color:var(--White);
+  padding:0px 2rem;
+}
+.navigation a img{
+  max-width: 80%;
+}
+
+.navigation ul li a:hover{
+  background-color: var(--Faded_White);
+  border-radius: 10px;
+}
+
+/* For the active section in the navigation */
+.nav_active{
+  background-color: var(--Faded_White);
+  padding-top:3px !important;
+  padding-bottom:3px !important;
+
+  border-radius: 10px;
+}
+
+/* For the main body wrapper css */
+.main_wrapper{
+  display: grid;
+  grid-template-rows: auto 1r;
+  gap:1rem;
+}
+
+/* This is for card componets */
+.home-song-container {
+  display: grid;
+  grid-auto-flow:column;
+  grid-auto-columns:90%;
+  padding: 3rem;
+  gap:1rem;
+  background-color: var(--Faded_Black);
+  min-height: 74.5vh;
+  color: var(--White);
+  border-radius: 10px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+/* .home-song-container::-webkit-scrollbar-button{
+  border-radius: 10px;
+  border:1px solid var(--White);
+  color:var(--White);
+  background-color: transparent;
+} */
+
+/* .home-song-container::-webkit-scrollbar-thumb{
+  border:1px solid var(--White);
+} */
+
+.home-song-container .song-container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 50% 50%;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.song-wrapper{
+  margin-left: 2.5rem;
+}
+
+.home-song-container .song-wrapper {
+  display: grid;
+  grid-template-rows: min-content;
+  width: 90%;
+  border-radius: 10px;
+  padding:1rem;
+  background: var(--Dark-Black);
+  box-shadow: 0px 4px 4px 0px var(--Shade-Black);
+  word-wrap: break-word;
+  word-break: normal;
+  white-space: pre-wrap;
+  line-height: 2rem;
+}
+
+.home-song-container .song-wrapper img{
+  inline-size: 100%;
+  border-radius: 10px;
+  max-height:12rem;
+  object-fit: cover;
+  margin-bottom: 10px;
+ 
+}
+
+.artist-song-container{
+
+  display: list-item;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.artist-song-container li{
+  display: list-item;
+  list-style: decimal;
+}
+
+/* End of card conponents */
+
+/* Music player start */
+.music-player{
+  grid-column: 1/3 ;
+  gap: 10px;
+  background-color: var(--Faded_Black) ;
+  padding: 5px;
+  color: var(--White);
+  position: relative;
+}
+.progressBar{
+  -webkit-appearance: none;
+  border-radius:10px;
+  background-color: var(--Faded_White);
+  position:absolute;
+  display: block;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+
+}
+.musicAudio{
+  position: absolute;
+}
+.song-info {
+  flex: 1;
+  color: #333;
+  font-size: 14px;
+  text-align: center; /* Center song info */
+}
+
+.control-button {
+  color: #333;
+  border: none;
+  background: transparent; /* Set background to transparent */
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+
+
+.greetings{
+  font-weight: 300;
+  margin-left: 0.2rem;
+  color: var(--White);
+}
+
+.search-bar {
+  /* margin-right: 32rem; */
+  /* margin-top: 0.3rem; */
+  width: 350px;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 15px;
+  color: var(--White);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid white;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.search-bar::placeholder {
+  color: var(--White);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.search-bar:hover,
+.search-bar:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.top-bar, .progress-area .song-timer, 
+.controls, .music-list .header, .music-list ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song-bar{
+  display: flex;
+}
+
+.img-area{
+  --size: 5rem;
+  flex-shrink: 0;
+  width: var(--size);
+  height: var(--size);
+}
+.img-area img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.song-details{
+  margin-left: 2rem;
+}
+.song-details p{
+color: var(--primary);
+}
+.song-details .name{font-size: 17px;margin-top: 15px;}
+.song-details .artist{font-size: 13px;opacity: 0.9;line-height: 1rem;}
+
+.progress-area{
+  left: 46rem;
+  /* margin-top: 1rem; */
+  top: 70px;
+  height: 4px;
+  width: 500px;
+  border-radius: 50px;
+  background: #f0f0f0;
+  cursor: pointer;
+  position: absolute;
+}
+.progress-area .progress-bar{
+  height: inherit;
+  width: 0%;
+  
+  border-radius: inherit;
+  background: var(--Darkgreen);
+}
+.progress-bar::before{
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  background: white;
+  transition: opacity 0.2s ease;
+}
+.progress-area:hover .progress-bar::before{
+  opacity: 1;
+  pointer-events: auto;
+}
+.progress-area .song-timer{
+  margin-top: 2px;
+}
+.song-timer span{
+  font-size: 13px;
+  color: var(--White);
+}
+.controls{
+  display: flex;
+  width: 20%;
+  position: absolute;
+  margin-bottom: 25px;
+  right: 40rem;
+}
+.controls i{
+  user-select: none;
+  background: var(--primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--White);
+  font-size: 30px;
+  cursor: pointer;
+}
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+  /* font-size: 35px; */
+}
+.controls #prev{
+}
+.controls #next{
+  
+}
+.controls .play-pause{
+  height: 54px;
+  width: 54px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--black);
+}
+.play-pause::before{
+  position: absolute;
+  content: "";
+  height: 38px;
+  width: 38px;
+  border-radius: inherit;
+  background: var(--White);
+ 
+}
+.play-pause i{
+  height: 38px;
+  width: 38px;
+  line-height: 38px;
+  text-align: center;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--Black);
+  position: absolute;
+}
+
+.music-list{
+  background: var(--white);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+  transition: all 0.15s ease-out;
+  display: none;
+}
+.music-list.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+.header .row{
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  color: var(--lightblack);
+}
+.header .row i{
+  cursor: default;
+}
+.header .row span{
+  margin-left: 5px;
+}
+.header #close{
+  font-size: 22px;
+  color: var(--black);
+}
+.music-list ul{
+  margin: 10px 0;
+  max-height: 260px;
+  overflow: auto;
+}
+.music-list ul::-webkit-scrollbar{
+  width: 0px;
+}
+.music-list ul li{
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  color: var(--lightblack);
+  border-bottom: 1px solid #E5E5E5;
+}
+.music-list ul li:last-child{
+  border-bottom: 0px;
+}
+.music-list ul li .row span{
+  font-size: 17px;
+}
+.music-list ul li .row p{
+  opacity: 0.9;
+}
+ul li .audio-duration{
+  font-size: 16px;
+}
+ul li.playing{
+  pointer-events: none;
+  color: var(--black);
+}
+.card-height{
+  height: 10rem;
+}
+
+.favorite{
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  outline: none;
+  color: #ff3252;
+
+}
+.removefavorite{
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  outline: none;
+  color: grey;
+  
+
+}  

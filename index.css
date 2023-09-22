@@ -1,0 +1,116 @@
+:root {
+  --Mobile: 375px;
+  --Desktop: 1440px;
+  /* Basic */
+  --Black: #000000;
+  --White: #ffffff;
+  --Faded_Black: #000000c0;
+  --Pink:#911f9b;
+  --Yellowish:#ccbe421c;
+  --Cyan:#91f0ea02;
+  --Blue:#0a65921f;
+  --Red:#b31111e6;
+  --Gray:#adadad;
+  --Darkgreen: #067e20;
+  /* Typography */
+
+  /* ### Body Copy */
+
+  --Font-size15: 15px; /* paragraph */
+
+  /* ### Font */
+  --poppins: "Poppins";
+  --roboto: "Roboto";
+  --Weight300: 300;
+  --Weight400: 400;
+  --Weight700: 700;
+  --Weight800: 800;
+  --Weight900: 900;
+}
+
+/* ::-webkit-scrollbar{
+  width: 8px;
+
+}
+::-webkit-scrollbar-thumb{
+  border:1px solid var(--Black);
+  color: var(--White);
+  border-radius: 11px;
+} */
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+  height: 9px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border: 1px solid var(--Black);
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--White);
+}
+
+* {
+  font-family: var(--poppins), var(--roboto);
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100svh;
+  width: 100%;
+}
+a {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+  color: var(--Black);
+}
+ol,
+li,
+ul {
+  display: flex;
+  list-style: none;
+}
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+}
+input[type=file] {
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--White);
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
